@@ -1,0 +1,1902 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../../usage/api_client/">
+      
+      
+        <link rel="next" href="../OmniFilterDefinition/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.28">
+    
+    
+      
+        <title>omni.OmniDashboardEmbedder - Omni SDK</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.6543a935.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+  
+  
+    
+    
+  
+  
+  <style>:root{--md-admonition-icon--example:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15.22 4.97a.75.75 0 0 1 1.06 0l6.5 6.5a.75.75 0 0 1 0 1.06l-6.5 6.5a.749.749 0 0 1-1.275-.326.749.749 0 0 1 .215-.734L21.19 12l-5.97-5.97a.75.75 0 0 1 0-1.06Zm-6.44 0a.75.75 0 0 1 0 1.06L2.81 12l5.97 5.97a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215l-6.5-6.5a.75.75 0 0 1 0-1.06l6.5-6.5a.75.75 0 0 1 1.06 0Z"/></svg>');}</style>
+
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/_mkdocstrings.css">
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#omni.OmniDashboardEmbedder" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <div data-md-color-scheme="default" data-md-component="outdated" hidden>
+        
+      </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Omni SDK" class="md-header__button md-logo" aria-label="Omni SDK" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Omni SDK
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              omni.OmniDashboardEmbedder
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/camoag/omni-sdk" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Omni SDK" class="md-nav__button md-logo" aria-label="Omni SDK" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Omni SDK
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/camoag/omni-sdk" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Getting Started
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Usage
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Usage
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../usage/dashboard_embedding/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Dashboard Embedding
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../usage/api_client/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    REST API Client
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    API Reference
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            API Reference
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Dashboard Embedding
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            Dashboard Embedding
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    omni.OmniDashboardEmbedder
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    omni.OmniDashboardEmbedder
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#omni.OmniDashboardEmbedder" class="md-nav__link">
+    <span class="md-ellipsis">
+      OmniDashboardEmbedder
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#omni.OmniDashboardEmbedder.PrefersDark" class="md-nav__link">
+    <span class="md-ellipsis">
+      PrefersDark
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#omni.OmniDashboardEmbedder.Theme" class="md-nav__link">
+    <span class="md-ellipsis">
+      Theme
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#omni.OmniDashboardEmbedder.build_url" class="md-nav__link">
+    <span class="md-ellipsis">
+      build_url
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../OmniFilterDefinition/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    omni.OmniFilterDefinition
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../OmniFilterSet/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    omni.OmniFilterSet
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    API Client
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            API Client
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../OmniApiClient/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    omni.OmniApiClient
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#omni.OmniDashboardEmbedder" class="md-nav__link">
+    <span class="md-ellipsis">
+      OmniDashboardEmbedder
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#omni.OmniDashboardEmbedder.PrefersDark" class="md-nav__link">
+    <span class="md-ellipsis">
+      PrefersDark
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#omni.OmniDashboardEmbedder.Theme" class="md-nav__link">
+    <span class="md-ellipsis">
+      Theme
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#omni.OmniDashboardEmbedder.build_url" class="md-nav__link">
+    <span class="md-ellipsis">
+      build_url
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+  <h1>omni.OmniDashboardEmbedder</h1>
+
+<div class="doc doc-object doc-class">
+
+
+
+<a id="omni.OmniDashboardEmbedder"></a>
+  <div class="doc doc-contents first">
+
+  
+      <p>Factory class for building and signing dashboard embedding URLs.</p>
+
+
+
+  <p><span class="doc-section-title">Parameters:</span></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr class="doc-section-item">
+          <td><code>organization_name</code></td>
+          <td>
+                <code>str | None</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>organization_name: Omni organization name. OMNI_ORGANIZATION_NAME environment variable will
+be used as a fallback.</p>
+            </div>
+          </td>
+          <td>
+                <code>None</code>
+          </td>
+        </tr>
+        <tr class="doc-section-item">
+          <td><code>embed_secret</code></td>
+          <td>
+                <code>str | None</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Omni embed secret. OMNI_EMBED_SECRET environment variable will be used as a fallback.</p>
+            </div>
+          </td>
+          <td>
+                <code>None</code>
+          </td>
+        </tr>
+        <tr class="doc-section-item">
+          <td><code>vanity_domain</code></td>
+          <td>
+                <code>str | None</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Vanity domain configured with Omni. Should not be fully qualified. OMNI_VANITY_DOMAIN
+environment variable will be used as a fallback.</p>
+            </div>
+          </td>
+          <td>
+                <code>None</code>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+
+  <p><span class="doc-section-title">Attributes:</span></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr class="doc-section-item">
+          <td><code><span title="omni.OmniDashboardEmbedder.embed_login_url">embed_login_url</span></code></td>
+          <td>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Base url of embedded dashboard urls.</p>
+            </div>
+          </td>
+        </tr>
+        <tr class="doc-section-item">
+          <td><code><span title="omni.OmniDashboardEmbedder.embed_secret">embed_secret</span></code></td>
+          <td>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Omni embed secret.</p>
+            </div>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+            <details class="quote">
+              <summary>Source code in <code>src/omni/embed.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 42</span>
+<span class="normal"> 43</span>
+<span class="normal"> 44</span>
+<span class="normal"> 45</span>
+<span class="normal"> 46</span>
+<span class="normal"> 47</span>
+<span class="normal"> 48</span>
+<span class="normal"> 49</span>
+<span class="normal"> 50</span>
+<span class="normal"> 51</span>
+<span class="normal"> 52</span>
+<span class="normal"> 53</span>
+<span class="normal"> 54</span>
+<span class="normal"> 55</span>
+<span class="normal"> 56</span>
+<span class="normal"> 57</span>
+<span class="normal"> 58</span>
+<span class="normal"> 59</span>
+<span class="normal"> 60</span>
+<span class="normal"> 61</span>
+<span class="normal"> 62</span>
+<span class="normal"> 63</span>
+<span class="normal"> 64</span>
+<span class="normal"> 65</span>
+<span class="normal"> 66</span>
+<span class="normal"> 67</span>
+<span class="normal"> 68</span>
+<span class="normal"> 69</span>
+<span class="normal"> 70</span>
+<span class="normal"> 71</span>
+<span class="normal"> 72</span>
+<span class="normal"> 73</span>
+<span class="normal"> 74</span>
+<span class="normal"> 75</span>
+<span class="normal"> 76</span>
+<span class="normal"> 77</span>
+<span class="normal"> 78</span>
+<span class="normal"> 79</span>
+<span class="normal"> 80</span>
+<span class="normal"> 81</span>
+<span class="normal"> 82</span>
+<span class="normal"> 83</span>
+<span class="normal"> 84</span>
+<span class="normal"> 85</span>
+<span class="normal"> 86</span>
+<span class="normal"> 87</span>
+<span class="normal"> 88</span>
+<span class="normal"> 89</span>
+<span class="normal"> 90</span>
+<span class="normal"> 91</span>
+<span class="normal"> 92</span>
+<span class="normal"> 93</span>
+<span class="normal"> 94</span>
+<span class="normal"> 95</span>
+<span class="normal"> 96</span>
+<span class="normal"> 97</span>
+<span class="normal"> 98</span>
+<span class="normal"> 99</span>
+<span class="normal">100</span>
+<span class="normal">101</span>
+<span class="normal">102</span>
+<span class="normal">103</span>
+<span class="normal">104</span>
+<span class="normal">105</span>
+<span class="normal">106</span>
+<span class="normal">107</span>
+<span class="normal">108</span>
+<span class="normal">109</span>
+<span class="normal">110</span>
+<span class="normal">111</span>
+<span class="normal">112</span>
+<span class="normal">113</span>
+<span class="normal">114</span>
+<span class="normal">115</span>
+<span class="normal">116</span>
+<span class="normal">117</span>
+<span class="normal">118</span>
+<span class="normal">119</span>
+<span class="normal">120</span>
+<span class="normal">121</span>
+<span class="normal">122</span>
+<span class="normal">123</span>
+<span class="normal">124</span>
+<span class="normal">125</span>
+<span class="normal">126</span>
+<span class="normal">127</span>
+<span class="normal">128</span>
+<span class="normal">129</span>
+<span class="normal">130</span>
+<span class="normal">131</span>
+<span class="normal">132</span>
+<span class="normal">133</span>
+<span class="normal">134</span>
+<span class="normal">135</span>
+<span class="normal">136</span>
+<span class="normal">137</span>
+<span class="normal">138</span>
+<span class="normal">139</span>
+<span class="normal">140</span>
+<span class="normal">141</span>
+<span class="normal">142</span>
+<span class="normal">143</span>
+<span class="normal">144</span>
+<span class="normal">145</span>
+<span class="normal">146</span>
+<span class="normal">147</span>
+<span class="normal">148</span>
+<span class="normal">149</span>
+<span class="normal">150</span>
+<span class="normal">151</span>
+<span class="normal">152</span>
+<span class="normal">153</span>
+<span class="normal">154</span>
+<span class="normal">155</span>
+<span class="normal">156</span>
+<span class="normal">157</span>
+<span class="normal">158</span>
+<span class="normal">159</span>
+<span class="normal">160</span>
+<span class="normal">161</span>
+<span class="normal">162</span>
+<span class="normal">163</span>
+<span class="normal">164</span>
+<span class="normal">165</span>
+<span class="normal">166</span>
+<span class="normal">167</span>
+<span class="normal">168</span>
+<span class="normal">169</span>
+<span class="normal">170</span>
+<span class="normal">171</span>
+<span class="normal">172</span>
+<span class="normal">173</span>
+<span class="normal">174</span>
+<span class="normal">175</span>
+<span class="normal">176</span>
+<span class="normal">177</span>
+<span class="normal">178</span>
+<span class="normal">179</span>
+<span class="normal">180</span>
+<span class="normal">181</span>
+<span class="normal">182</span>
+<span class="normal">183</span>
+<span class="normal">184</span>
+<span class="normal">185</span>
+<span class="normal">186</span>
+<span class="normal">187</span>
+<span class="normal">188</span>
+<span class="normal">189</span>
+<span class="normal">190</span>
+<span class="normal">191</span>
+<span class="normal">192</span>
+<span class="normal">193</span>
+<span class="normal">194</span>
+<span class="normal">195</span>
+<span class="normal">196</span>
+<span class="normal">197</span>
+<span class="normal">198</span>
+<span class="normal">199</span>
+<span class="normal">200</span>
+<span class="normal">201</span>
+<span class="normal">202</span>
+<span class="normal">203</span>
+<span class="normal">204</span>
+<span class="normal">205</span>
+<span class="normal">206</span>
+<span class="normal">207</span>
+<span class="normal">208</span>
+<span class="normal">209</span>
+<span class="normal">210</span>
+<span class="normal">211</span>
+<span class="normal">212</span>
+<span class="normal">213</span>
+<span class="normal">214</span>
+<span class="normal">215</span>
+<span class="normal">216</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span> <span class="nc">OmniDashboardEmbedder</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Factory class for building and signing dashboard embedding URLs.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        organization_name: organization_name: Omni organization name. OMNI_ORGANIZATION_NAME environment variable will</span>
+<span class="sd">            be used as a fallback.</span>
+<span class="sd">        embed_secret: Omni embed secret. OMNI_EMBED_SECRET environment variable will be used as a fallback.</span>
+<span class="sd">        vanity_domain: Vanity domain configured with Omni. Should not be fully qualified. OMNI_VANITY_DOMAIN</span>
+<span class="sd">            environment variable will be used as a fallback.</span>
+
+<span class="sd">    Attributes:</span>
+<span class="sd">        embed_login_url: Base url of embedded dashboard urls.</span>
+<span class="sd">        embed_secret: Omni embed secret.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">class</span> <span class="nc">PrefersDark</span><span class="p">(</span><span class="n">Enum</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;PrefersDark options</span>
+
+<span class="sd">        Attributes:</span>
+<span class="sd">            yes: true</span>
+<span class="sd">            no: false</span>
+<span class="sd">            system: system</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="n">yes</span> <span class="o">=</span> <span class="s2">&quot;true&quot;</span>
+        <span class="n">no</span> <span class="o">=</span> <span class="s2">&quot;false&quot;</span>
+        <span class="n">system</span> <span class="o">=</span> <span class="s2">&quot;system&quot;</span>
+
+    <span class="k">class</span> <span class="nc">Theme</span><span class="p">(</span><span class="n">Enum</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Theme options</span>
+
+<span class="sd">        Attributes:</span>
+<span class="sd">            dawn: dawn</span>
+<span class="sd">            vibes: vibes</span>
+<span class="sd">            breeze: breeze</span>
+<span class="sd">            blank: blank</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="n">dawn</span> <span class="o">=</span> <span class="s2">&quot;dawn&quot;</span>
+        <span class="n">vibes</span> <span class="o">=</span> <span class="s2">&quot;vibes&quot;</span>
+        <span class="n">breeze</span> <span class="o">=</span> <span class="s2">&quot;breeze&quot;</span>
+        <span class="n">blank</span> <span class="o">=</span> <span class="s2">&quot;blank&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">organization_name</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">embed_secret</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">vanity_domain</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="p">):</span>
+        <span class="n">omni_config</span> <span class="o">=</span> <span class="n">OmniConfig</span><span class="p">(</span>
+            <span class="n">required_attrs</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;embed_secret&quot;</span><span class="p">],</span>
+            <span class="n">organization_name</span><span class="o">=</span><span class="n">organization_name</span><span class="p">,</span>
+            <span class="n">embed_secret</span><span class="o">=</span><span class="n">embed_secret</span><span class="p">,</span>
+            <span class="n">vanity_domain</span><span class="o">=</span><span class="n">vanity_domain</span><span class="p">,</span>
+        <span class="p">)</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">omni_config</span><span class="o">.</span><span class="n">vanity_domain</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">omni_config</span><span class="o">.</span><span class="n">organization_name</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="n">OmniConfigError</span><span class="p">(</span>
+                <span class="s2">&quot;You must pass the vanity_domain or organization_name arguments OR &quot;</span>
+                <span class="s2">&quot;set the OMNI_ORGANIZATION_NAME or OMNI_VANITY_DOMAIN environment variables.&quot;</span>
+            <span class="p">)</span>
+        <span class="n">embed_host</span> <span class="o">=</span> <span class="p">(</span>
+            <span class="n">omni_config</span><span class="o">.</span><span class="n">vanity_domain</span>
+            <span class="ow">or</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">omni_config</span><span class="o">.</span><span class="n">organization_name</span><span class="si">}</span><span class="s2">.embed-omniapp.co&quot;</span>
+        <span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">embed_login_url</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;https://</span><span class="si">{</span><span class="n">embed_host</span><span class="si">}</span><span class="s2">/embed/login&quot;</span>
+
+        <span class="c1"># Required to appease mypy. If embed_secret is missing an OmniConfigError will have already been raised by the OmniConfig class.</span>
+        <span class="k">assert</span> <span class="n">omni_config</span><span class="o">.</span><span class="n">embed_secret</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">embed_secret</span> <span class="o">=</span> <span class="n">omni_config</span><span class="o">.</span><span class="n">embed_secret</span>
+
+    <span class="k">def</span> <span class="nf">build_url</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">content_path</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+        <span class="n">external_id</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+        <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+        <span class="n">custom_theme</span><span class="p">:</span> <span class="nb">dict</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">entity</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">filter_search_params</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="nb">dict</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">link_access</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">|</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">prefers_dark</span><span class="p">:</span> <span class="n">PrefersDark</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">theme</span><span class="p">:</span> <span class="n">Theme</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">user_attributes</span><span class="p">:</span> <span class="nb">dict</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Builds a signed dashboard embedding URL. For more information on the options see the [Omni Docs](</span>
+<span class="sd">        https://docs.omni.co/docs/embed/private-embedding#embed-url-customization-options)</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            content_path: Path pointing to the dashboard you wish to build a URL to embed.</span>
+<span class="sd">            external_id: Required parameter creating a unique ID. This can be any alphanumeric value.</span>
+<span class="sd">            name: Required parameter and can contain a non-unique name for the embed user&#39;s name property.</span>
+<span class="sd">            custom_theme: Allows you to stylize your embedded dashboard to your preferred colors.</span>
+<span class="sd">            entity: An id to reference the entity the user belongs to. Commonly is the customer name or other</span>
+<span class="sd">                identifying organization for this user.</span>
+<span class="sd">            filter_search_params: Encoded string or a dict representing dashboard filter values . This can be derived</span>
+<span class="sd">                by copying the substring after the &quot;?&quot; from a dashboard URL with non-empty filter values or using the</span>
+<span class="sd">                `OmniFilterSet` helper class.</span>
+<span class="sd">            link_access: Allows you to customize which other Omni dashboards can be linked to from the embedded dashboard.</span>
+<span class="sd">                If set to True, all links on the embedded dashboard are permissed and shown. Alternatively, a list of</span>
+<span class="sd">                dashboard IDs can be passed (i.e. [&quot;abcd1234&quot;, &quot;efgh5678&quot;, &quot;ijkl9999&quot;]) to only permiss to specific</span>
+<span class="sd">                dashboard IDs. Finally, if the parameter is None, all links to other Omni dashboards are</span>
+<span class="sd">                restricted. Note that link URLs to anything other than an Omni Dashboard will be shown and permissed</span>
+<span class="sd">                regardless of the linkAccess parameter.</span>
+<span class="sd">            prefers_dark: Dark mode setting.</span>
+<span class="sd">            theme: Visual theming options.</span>
+<span class="sd">            user_attributes: Dictionary of attributes matching defined user attributes in your Omni account.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            : Signed dashboard embedding URL.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="c1"># Preprocess some values before passing to URL object.</span>
+        <span class="k">if</span> <span class="n">link_access</span> <span class="ow">is</span> <span class="kc">True</span><span class="p">:</span>
+            <span class="n">_link_access</span> <span class="o">=</span> <span class="s2">&quot;__omni_link_access_open&quot;</span>
+        <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">link_access</span><span class="p">,</span> <span class="nb">list</span><span class="p">):</span>
+            <span class="n">_link_access</span> <span class="o">=</span> <span class="s2">&quot;,&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">link_access</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="ow">not</span> <span class="n">link_access</span><span class="p">:</span>
+            <span class="n">_link_access</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+                <span class="s2">&quot;link_access must be a list of dashboard IDs or True to allow links to all dashboards.&quot;</span>
+            <span class="p">)</span>
+
+        <span class="c1"># Convert empty dicts and strings to None.</span>
+        <span class="n">filter_search_params</span> <span class="o">=</span> <span class="n">filter_search_params</span> <span class="ow">or</span> <span class="kc">None</span>
+
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">filter_search_params</span><span class="p">,</span> <span class="nb">dict</span><span class="p">):</span>
+            <span class="n">filter_search_params</span> <span class="o">=</span> <span class="n">urllib</span><span class="o">.</span><span class="n">parse</span><span class="o">.</span><span class="n">urlencode</span><span class="p">(</span>
+                <span class="n">filter_search_params</span><span class="p">,</span> <span class="n">doseq</span><span class="o">=</span><span class="kc">True</span>
+            <span class="p">)</span>
+
+        <span class="n">url</span> <span class="o">=</span> <span class="n">DashboardEmbedUrl</span><span class="p">(</span>
+            <span class="n">base_url</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">embed_login_url</span><span class="p">,</span>
+            <span class="n">contentPath</span><span class="o">=</span><span class="n">content_path</span><span class="p">,</span>
+            <span class="n">externalId</span><span class="o">=</span><span class="n">external_id</span><span class="p">,</span>
+            <span class="n">name</span><span class="o">=</span><span class="n">name</span><span class="p">,</span>
+            <span class="n">customTheme</span><span class="o">=</span><span class="n">compact_json_dump</span><span class="p">(</span><span class="n">custom_theme</span><span class="p">)</span> <span class="k">if</span> <span class="n">custom_theme</span> <span class="k">else</span> <span class="kc">None</span><span class="p">,</span>
+            <span class="n">entity</span><span class="o">=</span><span class="n">entity</span><span class="p">,</span>
+            <span class="n">filterSearchParam</span><span class="o">=</span><span class="n">filter_search_params</span><span class="p">,</span>
+            <span class="n">linkAccess</span><span class="o">=</span><span class="n">_link_access</span><span class="p">,</span>
+            <span class="n">prefersDark</span><span class="o">=</span><span class="n">prefers_dark</span><span class="o">.</span><span class="n">value</span> <span class="k">if</span> <span class="n">prefers_dark</span> <span class="k">else</span> <span class="kc">None</span><span class="p">,</span>
+            <span class="n">theme</span><span class="o">=</span><span class="n">theme</span><span class="o">.</span><span class="n">value</span> <span class="k">if</span> <span class="n">theme</span> <span class="k">else</span> <span class="kc">None</span><span class="p">,</span>
+            <span class="n">userAttributes</span><span class="o">=</span><span class="p">(</span>
+                <span class="n">compact_json_dump</span><span class="p">(</span><span class="n">user_attributes</span><span class="p">)</span> <span class="k">if</span> <span class="n">user_attributes</span> <span class="k">else</span> <span class="kc">None</span>
+            <span class="p">),</span>
+            <span class="n">nonce</span><span class="o">=</span><span class="n">uuid</span><span class="o">.</span><span class="n">uuid4</span><span class="p">()</span><span class="o">.</span><span class="n">hex</span><span class="p">,</span>
+        <span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_sign_url</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+        <span class="k">return</span> <span class="nb">str</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">_sign_url</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">url</span><span class="p">:</span> <span class="n">DashboardEmbedUrl</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Creates a signature and adds it to the URL object.&quot;&quot;&quot;</span>
+
+        <span class="c1"># IMPORTANT: These must be in the correct order as documented here</span>
+        <span class="c1"># https://docs.omni.co/docs/embed/private-embedding#manually-generate-a-signature-and-url-hard-mode</span>
+        <span class="n">blob_items</span> <span class="o">=</span> <span class="p">[</span>
+            <span class="n">url</span><span class="o">.</span><span class="n">base_url</span><span class="p">,</span>
+            <span class="n">url</span><span class="o">.</span><span class="n">contentPath</span><span class="p">,</span>
+            <span class="n">url</span><span class="o">.</span><span class="n">externalId</span><span class="p">,</span>
+            <span class="n">url</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+            <span class="n">url</span><span class="o">.</span><span class="n">nonce</span><span class="p">,</span>
+            <span class="n">url</span><span class="o">.</span><span class="n">customTheme</span><span class="p">,</span>
+            <span class="n">url</span><span class="o">.</span><span class="n">entity</span><span class="p">,</span>
+            <span class="n">url</span><span class="o">.</span><span class="n">filterSearchParam</span><span class="p">,</span>
+            <span class="n">url</span><span class="o">.</span><span class="n">linkAccess</span><span class="p">,</span>
+            <span class="n">url</span><span class="o">.</span><span class="n">prefersDark</span><span class="p">,</span>
+            <span class="n">url</span><span class="o">.</span><span class="n">theme</span><span class="p">,</span>
+            <span class="n">url</span><span class="o">.</span><span class="n">userAttributes</span><span class="p">,</span>
+        <span class="p">]</span>
+
+        <span class="n">blob</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="n">i</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">blob_items</span> <span class="k">if</span> <span class="n">i</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">])</span>
+        <span class="n">hmac_hash</span> <span class="o">=</span> <span class="n">hmac</span><span class="o">.</span><span class="n">new</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">embed_secret</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s2">&quot;utf-8&quot;</span><span class="p">),</span> <span class="n">blob</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s2">&quot;utf-8&quot;</span><span class="p">),</span> <span class="n">hashlib</span><span class="o">.</span><span class="n">sha256</span>
+        <span class="p">)</span><span class="o">.</span><span class="n">digest</span><span class="p">()</span>
+        <span class="n">url</span><span class="o">.</span><span class="n">signature</span> <span class="o">=</span> <span class="n">base64</span><span class="o">.</span><span class="n">urlsafe_b64encode</span><span class="p">(</span><span class="n">hmac_hash</span><span class="p">)</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s2">&quot;utf-8&quot;</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+            </details>
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+<div class="doc doc-object doc-class">
+
+
+
+<h2 id="omni.OmniDashboardEmbedder.PrefersDark" class="doc doc-heading">
+          <code>PrefersDark</code>
+
+
+</h2>
+
+
+  <div class="doc doc-contents ">
+          <p class="doc doc-class-bases">
+            Bases: <code><span title="enum.Enum">Enum</span></code></p>
+
+  
+      <p>PrefersDark options</p>
+
+
+
+  <p><span class="doc-section-title">Attributes:</span></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr class="doc-section-item">
+          <td><code><span title="omni.OmniDashboardEmbedder.PrefersDark.yes">yes</span></code></td>
+          <td>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>true</p>
+            </div>
+          </td>
+        </tr>
+        <tr class="doc-section-item">
+          <td><code><span title="omni.OmniDashboardEmbedder.PrefersDark.no">no</span></code></td>
+          <td>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>false</p>
+            </div>
+          </td>
+        </tr>
+        <tr class="doc-section-item">
+          <td><code><span title="omni.OmniDashboardEmbedder.PrefersDark.system">system</span></code></td>
+          <td>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>system</p>
+            </div>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+            <details class="quote">
+              <summary>Source code in <code>src/omni/embed.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">57</span>
+<span class="normal">58</span>
+<span class="normal">59</span>
+<span class="normal">60</span>
+<span class="normal">61</span>
+<span class="normal">62</span>
+<span class="normal">63</span>
+<span class="normal">64</span>
+<span class="normal">65</span>
+<span class="normal">66</span>
+<span class="normal">67</span>
+<span class="normal">68</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span> <span class="nc">PrefersDark</span><span class="p">(</span><span class="n">Enum</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;PrefersDark options</span>
+
+<span class="sd">    Attributes:</span>
+<span class="sd">        yes: true</span>
+<span class="sd">        no: false</span>
+<span class="sd">        system: system</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">yes</span> <span class="o">=</span> <span class="s2">&quot;true&quot;</span>
+    <span class="n">no</span> <span class="o">=</span> <span class="s2">&quot;false&quot;</span>
+    <span class="n">system</span> <span class="o">=</span> <span class="s2">&quot;system&quot;</span>
+</code></pre></div></td></tr></table></div>
+            </details>
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+  </div>
+
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h2 id="omni.OmniDashboardEmbedder.Theme" class="doc doc-heading">
+          <code>Theme</code>
+
+
+</h2>
+
+
+  <div class="doc doc-contents ">
+          <p class="doc doc-class-bases">
+            Bases: <code><span title="enum.Enum">Enum</span></code></p>
+
+  
+      <p>Theme options</p>
+
+
+
+  <p><span class="doc-section-title">Attributes:</span></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr class="doc-section-item">
+          <td><code><span title="omni.OmniDashboardEmbedder.Theme.dawn">dawn</span></code></td>
+          <td>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>dawn</p>
+            </div>
+          </td>
+        </tr>
+        <tr class="doc-section-item">
+          <td><code><span title="omni.OmniDashboardEmbedder.Theme.vibes">vibes</span></code></td>
+          <td>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>vibes</p>
+            </div>
+          </td>
+        </tr>
+        <tr class="doc-section-item">
+          <td><code><span title="omni.OmniDashboardEmbedder.Theme.breeze">breeze</span></code></td>
+          <td>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>breeze</p>
+            </div>
+          </td>
+        </tr>
+        <tr class="doc-section-item">
+          <td><code><span title="omni.OmniDashboardEmbedder.Theme.blank">blank</span></code></td>
+          <td>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>blank</p>
+            </div>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+            <details class="quote">
+              <summary>Source code in <code>src/omni/embed.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">70</span>
+<span class="normal">71</span>
+<span class="normal">72</span>
+<span class="normal">73</span>
+<span class="normal">74</span>
+<span class="normal">75</span>
+<span class="normal">76</span>
+<span class="normal">77</span>
+<span class="normal">78</span>
+<span class="normal">79</span>
+<span class="normal">80</span>
+<span class="normal">81</span>
+<span class="normal">82</span>
+<span class="normal">83</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span> <span class="nc">Theme</span><span class="p">(</span><span class="n">Enum</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Theme options</span>
+
+<span class="sd">    Attributes:</span>
+<span class="sd">        dawn: dawn</span>
+<span class="sd">        vibes: vibes</span>
+<span class="sd">        breeze: breeze</span>
+<span class="sd">        blank: blank</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">dawn</span> <span class="o">=</span> <span class="s2">&quot;dawn&quot;</span>
+    <span class="n">vibes</span> <span class="o">=</span> <span class="s2">&quot;vibes&quot;</span>
+    <span class="n">breeze</span> <span class="o">=</span> <span class="s2">&quot;breeze&quot;</span>
+    <span class="n">blank</span> <span class="o">=</span> <span class="s2">&quot;blank&quot;</span>
+</code></pre></div></td></tr></table></div>
+            </details>
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+  </div>
+
+
+</div>
+
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h2 id="omni.OmniDashboardEmbedder.build_url" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">build_url</span><span class="p">(</span><span class="n">content_path</span><span class="p">,</span> <span class="n">external_id</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">custom_theme</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">entity</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">filter_search_params</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">link_access</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">prefers_dark</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">theme</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">user_attributes</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+
+</h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Builds a signed dashboard embedding URL. For more information on the options see the <a href="https://docs.omni.co/docs/embed/private-embedding#embed-url-customization-options">Omni Docs</a></p>
+
+
+
+  <p><span class="doc-section-title">Parameters:</span></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr class="doc-section-item">
+          <td><code>content_path</code></td>
+          <td>
+                <code>str</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Path pointing to the dashboard you wish to build a URL to embed.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr class="doc-section-item">
+          <td><code>external_id</code></td>
+          <td>
+                <code>str</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Required parameter creating a unique ID. This can be any alphanumeric value.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr class="doc-section-item">
+          <td><code>name</code></td>
+          <td>
+                <code>str</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Required parameter and can contain a non-unique name for the embed user's name property.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr class="doc-section-item">
+          <td><code>custom_theme</code></td>
+          <td>
+                <code>dict | None</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Allows you to stylize your embedded dashboard to your preferred colors.</p>
+            </div>
+          </td>
+          <td>
+                <code>None</code>
+          </td>
+        </tr>
+        <tr class="doc-section-item">
+          <td><code>entity</code></td>
+          <td>
+                <code>str | None</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>An id to reference the entity the user belongs to. Commonly is the customer name or other
+identifying organization for this user.</p>
+            </div>
+          </td>
+          <td>
+                <code>None</code>
+          </td>
+        </tr>
+        <tr class="doc-section-item">
+          <td><code>filter_search_params</code></td>
+          <td>
+                <code>str | dict | None</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Encoded string or a dict representing dashboard filter values . This can be derived
+by copying the substring after the "?" from a dashboard URL with non-empty filter values or using the
+<code>OmniFilterSet</code> helper class.</p>
+            </div>
+          </td>
+          <td>
+                <code>None</code>
+          </td>
+        </tr>
+        <tr class="doc-section-item">
+          <td><code>link_access</code></td>
+          <td>
+                <code>bool | list[str] | None</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Allows you to customize which other Omni dashboards can be linked to from the embedded dashboard.
+If set to True, all links on the embedded dashboard are permissed and shown. Alternatively, a list of
+dashboard IDs can be passed (i.e. ["abcd1234", "efgh5678", "ijkl9999"]) to only permiss to specific
+dashboard IDs. Finally, if the parameter is None, all links to other Omni dashboards are
+restricted. Note that link URLs to anything other than an Omni Dashboard will be shown and permissed
+regardless of the linkAccess parameter.</p>
+            </div>
+          </td>
+          <td>
+                <code>None</code>
+          </td>
+        </tr>
+        <tr class="doc-section-item">
+          <td><code>prefers_dark</code></td>
+          <td>
+                <code><a class="autorefs autorefs-internal" title="omni.embed.OmniDashboardEmbedder.PrefersDark" href="#omni.OmniDashboardEmbedder.PrefersDark">PrefersDark</a> | None</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Dark mode setting.</p>
+            </div>
+          </td>
+          <td>
+                <code>None</code>
+          </td>
+        </tr>
+        <tr class="doc-section-item">
+          <td><code>theme</code></td>
+          <td>
+                <code><a class="autorefs autorefs-internal" title="omni.embed.OmniDashboardEmbedder.Theme" href="#omni.OmniDashboardEmbedder.Theme">Theme</a> | None</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Visual theming options.</p>
+            </div>
+          </td>
+          <td>
+                <code>None</code>
+          </td>
+        </tr>
+        <tr class="doc-section-item">
+          <td><code>user_attributes</code></td>
+          <td>
+                <code>dict | None</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Dictionary of attributes matching defined user attributes in your Omni account.</p>
+            </div>
+          </td>
+          <td>
+                <code>None</code>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+
+  <p><span class="doc-section-title">Returns:</span></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr class="doc-section-item">
+          <td>
+                <code>str</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Signed dashboard embedding URL.</p>
+            </div>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+          <details class="quote">
+            <summary>Source code in <code>src/omni/embed.py</code></summary>
+            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">113</span>
+<span class="normal">114</span>
+<span class="normal">115</span>
+<span class="normal">116</span>
+<span class="normal">117</span>
+<span class="normal">118</span>
+<span class="normal">119</span>
+<span class="normal">120</span>
+<span class="normal">121</span>
+<span class="normal">122</span>
+<span class="normal">123</span>
+<span class="normal">124</span>
+<span class="normal">125</span>
+<span class="normal">126</span>
+<span class="normal">127</span>
+<span class="normal">128</span>
+<span class="normal">129</span>
+<span class="normal">130</span>
+<span class="normal">131</span>
+<span class="normal">132</span>
+<span class="normal">133</span>
+<span class="normal">134</span>
+<span class="normal">135</span>
+<span class="normal">136</span>
+<span class="normal">137</span>
+<span class="normal">138</span>
+<span class="normal">139</span>
+<span class="normal">140</span>
+<span class="normal">141</span>
+<span class="normal">142</span>
+<span class="normal">143</span>
+<span class="normal">144</span>
+<span class="normal">145</span>
+<span class="normal">146</span>
+<span class="normal">147</span>
+<span class="normal">148</span>
+<span class="normal">149</span>
+<span class="normal">150</span>
+<span class="normal">151</span>
+<span class="normal">152</span>
+<span class="normal">153</span>
+<span class="normal">154</span>
+<span class="normal">155</span>
+<span class="normal">156</span>
+<span class="normal">157</span>
+<span class="normal">158</span>
+<span class="normal">159</span>
+<span class="normal">160</span>
+<span class="normal">161</span>
+<span class="normal">162</span>
+<span class="normal">163</span>
+<span class="normal">164</span>
+<span class="normal">165</span>
+<span class="normal">166</span>
+<span class="normal">167</span>
+<span class="normal">168</span>
+<span class="normal">169</span>
+<span class="normal">170</span>
+<span class="normal">171</span>
+<span class="normal">172</span>
+<span class="normal">173</span>
+<span class="normal">174</span>
+<span class="normal">175</span>
+<span class="normal">176</span>
+<span class="normal">177</span>
+<span class="normal">178</span>
+<span class="normal">179</span>
+<span class="normal">180</span>
+<span class="normal">181</span>
+<span class="normal">182</span>
+<span class="normal">183</span>
+<span class="normal">184</span>
+<span class="normal">185</span>
+<span class="normal">186</span>
+<span class="normal">187</span>
+<span class="normal">188</span>
+<span class="normal">189</span>
+<span class="normal">190</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">build_url</span><span class="p">(</span>
+    <span class="bp">self</span><span class="p">,</span>
+    <span class="n">content_path</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+    <span class="n">external_id</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+    <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+    <span class="n">custom_theme</span><span class="p">:</span> <span class="nb">dict</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="n">entity</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="n">filter_search_params</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="nb">dict</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="n">link_access</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">|</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="n">prefers_dark</span><span class="p">:</span> <span class="n">PrefersDark</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="n">theme</span><span class="p">:</span> <span class="n">Theme</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="n">user_attributes</span><span class="p">:</span> <span class="nb">dict</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Builds a signed dashboard embedding URL. For more information on the options see the [Omni Docs](</span>
+<span class="sd">    https://docs.omni.co/docs/embed/private-embedding#embed-url-customization-options)</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        content_path: Path pointing to the dashboard you wish to build a URL to embed.</span>
+<span class="sd">        external_id: Required parameter creating a unique ID. This can be any alphanumeric value.</span>
+<span class="sd">        name: Required parameter and can contain a non-unique name for the embed user&#39;s name property.</span>
+<span class="sd">        custom_theme: Allows you to stylize your embedded dashboard to your preferred colors.</span>
+<span class="sd">        entity: An id to reference the entity the user belongs to. Commonly is the customer name or other</span>
+<span class="sd">            identifying organization for this user.</span>
+<span class="sd">        filter_search_params: Encoded string or a dict representing dashboard filter values . This can be derived</span>
+<span class="sd">            by copying the substring after the &quot;?&quot; from a dashboard URL with non-empty filter values or using the</span>
+<span class="sd">            `OmniFilterSet` helper class.</span>
+<span class="sd">        link_access: Allows you to customize which other Omni dashboards can be linked to from the embedded dashboard.</span>
+<span class="sd">            If set to True, all links on the embedded dashboard are permissed and shown. Alternatively, a list of</span>
+<span class="sd">            dashboard IDs can be passed (i.e. [&quot;abcd1234&quot;, &quot;efgh5678&quot;, &quot;ijkl9999&quot;]) to only permiss to specific</span>
+<span class="sd">            dashboard IDs. Finally, if the parameter is None, all links to other Omni dashboards are</span>
+<span class="sd">            restricted. Note that link URLs to anything other than an Omni Dashboard will be shown and permissed</span>
+<span class="sd">            regardless of the linkAccess parameter.</span>
+<span class="sd">        prefers_dark: Dark mode setting.</span>
+<span class="sd">        theme: Visual theming options.</span>
+<span class="sd">        user_attributes: Dictionary of attributes matching defined user attributes in your Omni account.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        : Signed dashboard embedding URL.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="c1"># Preprocess some values before passing to URL object.</span>
+    <span class="k">if</span> <span class="n">link_access</span> <span class="ow">is</span> <span class="kc">True</span><span class="p">:</span>
+        <span class="n">_link_access</span> <span class="o">=</span> <span class="s2">&quot;__omni_link_access_open&quot;</span>
+    <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">link_access</span><span class="p">,</span> <span class="nb">list</span><span class="p">):</span>
+        <span class="n">_link_access</span> <span class="o">=</span> <span class="s2">&quot;,&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">link_access</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="ow">not</span> <span class="n">link_access</span><span class="p">:</span>
+        <span class="n">_link_access</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+            <span class="s2">&quot;link_access must be a list of dashboard IDs or True to allow links to all dashboards.&quot;</span>
+        <span class="p">)</span>
+
+    <span class="c1"># Convert empty dicts and strings to None.</span>
+    <span class="n">filter_search_params</span> <span class="o">=</span> <span class="n">filter_search_params</span> <span class="ow">or</span> <span class="kc">None</span>
+
+    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">filter_search_params</span><span class="p">,</span> <span class="nb">dict</span><span class="p">):</span>
+        <span class="n">filter_search_params</span> <span class="o">=</span> <span class="n">urllib</span><span class="o">.</span><span class="n">parse</span><span class="o">.</span><span class="n">urlencode</span><span class="p">(</span>
+            <span class="n">filter_search_params</span><span class="p">,</span> <span class="n">doseq</span><span class="o">=</span><span class="kc">True</span>
+        <span class="p">)</span>
+
+    <span class="n">url</span> <span class="o">=</span> <span class="n">DashboardEmbedUrl</span><span class="p">(</span>
+        <span class="n">base_url</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">embed_login_url</span><span class="p">,</span>
+        <span class="n">contentPath</span><span class="o">=</span><span class="n">content_path</span><span class="p">,</span>
+        <span class="n">externalId</span><span class="o">=</span><span class="n">external_id</span><span class="p">,</span>
+        <span class="n">name</span><span class="o">=</span><span class="n">name</span><span class="p">,</span>
+        <span class="n">customTheme</span><span class="o">=</span><span class="n">compact_json_dump</span><span class="p">(</span><span class="n">custom_theme</span><span class="p">)</span> <span class="k">if</span> <span class="n">custom_theme</span> <span class="k">else</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">entity</span><span class="o">=</span><span class="n">entity</span><span class="p">,</span>
+        <span class="n">filterSearchParam</span><span class="o">=</span><span class="n">filter_search_params</span><span class="p">,</span>
+        <span class="n">linkAccess</span><span class="o">=</span><span class="n">_link_access</span><span class="p">,</span>
+        <span class="n">prefersDark</span><span class="o">=</span><span class="n">prefers_dark</span><span class="o">.</span><span class="n">value</span> <span class="k">if</span> <span class="n">prefers_dark</span> <span class="k">else</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">theme</span><span class="o">=</span><span class="n">theme</span><span class="o">.</span><span class="n">value</span> <span class="k">if</span> <span class="n">theme</span> <span class="k">else</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">userAttributes</span><span class="o">=</span><span class="p">(</span>
+            <span class="n">compact_json_dump</span><span class="p">(</span><span class="n">user_attributes</span><span class="p">)</span> <span class="k">if</span> <span class="n">user_attributes</span> <span class="k">else</span> <span class="kc">None</span>
+        <span class="p">),</span>
+        <span class="n">nonce</span><span class="o">=</span><span class="n">uuid</span><span class="o">.</span><span class="n">uuid4</span><span class="p">()</span><span class="o">.</span><span class="n">hex</span><span class="p">,</span>
+    <span class="p">)</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">_sign_url</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+    <span class="k">return</span> <span class="nb">str</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+          </details>
+  </div>
+
+</div>
+
+
+
+  </div>
+
+  </div>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.sections", "navigation.expand", "navigation.path", "toc.follow", "navigation.top", "search.suggest", "search.highlight", "search.share", "content.code.annotate"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"default": "stable", "provider": "mike"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.fe8b6f2b.min.js"></script>
+      
+    
+  </body>
+</html>
